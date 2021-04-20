@@ -1,14 +1,35 @@
-<h2>Cadastro do estudante: {{hero.name | uppercase}} </h2>
+<h2>Cadastro do aluno: {{hero.nome | uppercase}} </h2>
 
 <div>
-    <label for="name">Nome do Aluno: </label>
-    <input id="name" [(ngModel)]="hero.name" placeholder="name">
+    <label for="nome">Nome do Aluno: </label>
+    <input id="nome" [(ngModel)]="hero.nome" placeholder="nome">
   </div>
-
 
   <div>
-    <label for="number">Idade: </label>
-    <input id="number" [(ngModel)]="hero.number" placeholder="naumber">
+    <label for="id">Id: </label>
+    <input id="id" [(ngModel)]="hero.id" placeholder="id">
   </div>
+
+  <div>
+    <label for="Idade">Idade: </label>
+    <input id="Idade" [(ngModel)]="hero.Idade" placeholder="Idade">
+  </div>
+
+  <div>
+    <label for="Email">Email: </label>
+    <input id="Email" [(ngModel)]="hero.Email" placeholder="Email">
+  </div>
+
+  <div>
+    <label for="Curso">Curso do estudante: </label>
+    <input id="Curso" [(ngModel)]="hero.Curso" placeholder="Curso">
+  </div>
+
+  <div>
+    <label for="genero">Gênero: </label>
+    <input id="genero" [(ngModel)]="hero.genero" placeholder="genero">
+  </div>
+
+  
 
 

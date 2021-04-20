@@ -1,4 +1,8 @@
 export interface Hero {
     id: number;
-    name: string;
+    nome: string;
+    Idade: string;
+    Email: string;
+    Curso: string;
+    genero: string;
 }
