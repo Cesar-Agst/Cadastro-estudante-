@@ -1,8 +1,10 @@
 export interface Hero {
-    
+    id: number;
+    idade: number;
     nome: string;
-    Idade: string;
-    Email: string;
-    Curso: string;
+    email: string;
     genero: string;
+    curso: string;
+
+
 }

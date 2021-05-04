@@ -1,40 +1,35 @@
-<h2>My Heroes</h2>
+<div *ngIf="selectedHero">
+
+  <h2>{{selectedHero.name | uppercase}} Informações</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label for="hero-nome">Nome do estudante: </label>
+    <input id="hero-nome" [(ngModel)]="selectedHero.nome" placeholder="nome">
+  </div>
+  <div>
+    <label for="hero-idade">Idade: </label>
+    <input id="hero-idade" [(ngModel)]="selectedHero.idade" placeholder="idade">
+  </div>
+  <div>
+    <label for="hero-email">Email: </label>
+    <input id="hero-email" [(ngModel)]="selectedHero.email" placeholder="email">
+  </div>
+  <div>
+    <label for="hero-genero">Gênero: </label>
+    <input id="hero-genero" [(ngModel)]="selectedHero.genero" placeholder="genero">
+  </div>
+  <div>
+    <label for="hero-curso">Curso: </label>
+    <input id="herp-curso" [(ngModel)]="selectedHero.curso" placeholder="curso">
+  </div>
+
+</div>
+
+<h2>Estudantes Cadastrados</h2>
 <ul class="heroes">
-  <li>
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-  </li>
+  <li *ngFor="let hero of heroes"
+  [class.selected]="hero === selectedHero"
+  (click)="onSelect(hero)">
+  <span class="badge">{{hero.id}}</span> {{hero.nome}}
+</li>
 </ul>
-
-
-
-
-<h2>Cadastro do aluno: {{hero.nome | uppercase}} </h2>
-
-<div>
-    <label for="nome">Nome do Aluno: </label>
-    <input id="nome" [(ngModel)]="hero.nome" placeholder="nome">
-  </div>
-
- <div>
-    <label for="Idade">Idade: </label>
-    <input id="Idade" [(ngModel)]="hero.Idade" placeholder="Idade">
-  </div>
-
-  <div>
-    <label for="Email">Email: </label>
-    <input id="Email" [(ngModel)]="hero.Email" placeholder="Email">
-  </div>
-
-  <div>
-    <label for="Curso">Curso do estudante: </label>
-    <input id="Curso" [(ngModel)]="hero.Curso" placeholder="Curso">
-  </div>
-
-  <div>
-    <label for="genero">Gênero: </label>
-    <input id="genero" [(ngModel)]="hero.genero" placeholder="genero">
-  </div>
-
-  
-
-
