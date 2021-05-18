@@ -1,6 +1,6 @@
 <div *ngIf="selectedHero">
-
-  <h2>{{selectedHero.name | uppercase}} Informações</h2>
+  
+  <h2>{{selectedHero.name | uppercase}} Informações do Estudante</h2>
   <div><span>id: </span>{{selectedHero.id}}</div>
   <div>
     <label for="hero-nome">Nome do estudante: </label>
@@ -24,7 +24,7 @@
   </div>
 
 </div>
-<h2>Estudantes Cadastrados</h2>
+
 
 <ul class="heroes">
   <li *ngFor="let hero of heroes"
