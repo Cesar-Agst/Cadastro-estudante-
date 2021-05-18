@@ -24,12 +24,16 @@
   </div>
 
 </div>
-
 <h2>Estudantes Cadastrados</h2>
+
 <ul class="heroes">
   <li *ngFor="let hero of heroes"
-  [class.selected]="hero === selectedHero"
-  (click)="onSelect(hero)">
-  <span class="badge">{{hero.id}}</span> {{hero.nome}}
-</li>
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.nome}}
+  </li>
 </ul>
+
+
+
+
