@@ -1,10 +1,25 @@
 <div *ngIf="hero">
-
-    <h2>{{hero.nome | uppercase}} Details</h2>
-    <div><span>id: </span>{{hero.id}}</div>
-    <div>
-      <label for="hero-nome">Nome: </label>
-      <input id="hero-nome" [(ngModel)]="hero.nome" placeholder="nome">
-    </div>
-    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+  <h2>{{hero.nome | uppercase}} informações</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label for="hero-name">Nome do estudate: </label>
+    <input id="hero-name" [(ngModel)]="hero.nome" placeholder="NOME"/>
   </div>
+  <div>
+    <label for="hero-idade">Idade: </label>
+    <input id="hero-idade" [(ngModel)]="hero.idade" placeholder="IDADE"/>
+  </div>
+  <div>
+    <label for="hero-email">Email: </label>
+    <input id="hero-email" [(ngModel)]="hero.email" placeholder="EMAIL"/>
+  </div>
+  <div>
+    <label for="hero-genero">Gênero: </label>
+    <input id="hero-genero" [(ngModel)]="hero.genero" placeholder="GENERO"/>
+  </div>
+  <div>
+    <label for="hero-curso">Curso: </label>
+    <input id="hero-curso" [(ngModel)]="hero.curso" placeholder="CURSO"/>
+  </div>
+  <button (click)="goBack()">Voltar</button>
+</div>

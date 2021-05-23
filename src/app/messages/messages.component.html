@@ -1,8 +1,8 @@
 <div *ngIf="messageService.messages.length">
 
-    <h2>Estudantes selecionados</h2>
-    <button class="clear"
-            (click)="messageService.clear()">Cancelar envio</button>
-    <div *ngFor='let message of messageService.messages'> {{message}} </div>
-  
-  </div>
+        
+        <button class="clear"
+                (click)="messageService.clear()">APAGAR MENSAGEM</button>
+        <div *ngFor='let message of messageService.messages'> {{message}} </div>
+      
+      </div>

@@ -1,38 +1,14 @@
-<div *ngIf="selectedHero">
-  
-  <h2>{{selectedHero.name | uppercase}} Informações do Estudante</h2>
-  <div><span>id: </span>{{selectedHero.id}}</div>
-  <div>
-    <label for="hero-nome">Nome do estudante: </label>
-    <input id="hero-nome" [(ngModel)]="selectedHero.nome" placeholder="nome">
-  </div>
-  <div>
-    <label for="hero-idade">Idade: </label>
-    <input id="hero-idade" [(ngModel)]="selectedHero.idade" placeholder="idade">
-  </div>
-  <div>
-    <label for="hero-email">Email: </label>
-    <input id="hero-email" [(ngModel)]="selectedHero.email" placeholder="email">
-  </div>
-  <div>
-    <label for="hero-genero">Gênero: </label>
-    <input id="hero-genero" [(ngModel)]="selectedHero.genero" placeholder="genero">
-  </div>
-  <div>
-    <label for="hero-curso">Curso: </label>
-    <input id="herp-curso" [(ngModel)]="selectedHero.curso" placeholder="curso">
-  </div>
-
-</div>
-
-
+<h2>Cadastro</h2>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes"
-    [class.selected]="hero === selectedHero"
-    (click)="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.nome}}
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.nome}}
+      
+    </a>
   </li>
+  
 </ul>
+
 
 
 
