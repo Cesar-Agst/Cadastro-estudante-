@@ -3,13 +3,19 @@
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{hero.id}}">
       <span class="badge">{{hero.id}}</span> {{hero.nome}}
-      
     </a>
+    <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
   </li>
-  
 </ul>
+<div>
+  <label for="new-hero">Nome do estudante: </label>
+  <input id="new-hero" #heronome />
+  
 
 
-
-
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="add-button" (click)="add(heronome.value); heronome.value=''">
+    Colocar estudante no sistema
+  </button>
+</div>
 

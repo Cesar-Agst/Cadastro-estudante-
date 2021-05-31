@@ -1,10 +1,12 @@
 <div *ngIf="hero">
-  <h2>{{hero.nome | uppercase}} informações</h2>
+  <h2>{{hero.nome | uppercase}} Informações</h2>
   <div><span>id: </span>{{hero.id}}</div>
   <div>
-    <label for="hero-name">Nome do estudate: </label>
-    <input id="hero-name" [(ngModel)]="hero.nome" placeholder="NOME"/>
+      <label for="hero-nome">Nome do estudante: </label>
+      <input id="hero-nome" [(ngModel)]="hero.nome" placeholder="nome">
+
   </div>
+  
   <div>
     <label for="hero-idade">Idade: </label>
     <input id="hero-idade" [(ngModel)]="hero.idade" placeholder="IDADE"/>
@@ -21,5 +23,8 @@
     <label for="hero-curso">Curso: </label>
     <input id="hero-curso" [(ngModel)]="hero.curso" placeholder="CURSO"/>
   </div>
+  <button (click)="save()">Salvar</button>
   <button (click)="goBack()">Voltar</button>
 </div>
+
+
